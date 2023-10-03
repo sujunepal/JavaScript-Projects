@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Phone Number Form</title>
+  <style>
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h2>Phone Number Form</h2>
+  <form onsubmit="return validateForm()">
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone">
+    <span id="phoneError" class="error"></span><br><br>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <script>
+    function validateForm() {
+      var phoneInput = document.getElementById("phone").value;
+
+      if (phoneInput === "") {
+        document.getElementById("phoneError").innerText = "Please enter a phone number.";
+        return false; // Prevent form submission
+      } else {
+        document.getElementById("phoneError").innerText = ""; // Clear error message
+        return true; // Allow form submission
+      }
+    }
+  </script>
+</body>
+</html>

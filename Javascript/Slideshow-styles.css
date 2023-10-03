@@ -1,0 +1,23 @@
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+  }
+  
+  .slide {
+    display: none;
+  }
+  
+  img {
+    width: 100%;
+  }
+  
+  .fade {
+    animation: fade 2s ease-in-out infinite;
+  }
+  
+  @keyframes fade {
+    0%, 100% { opacity: 0; }
+    20%, 80% { opacity: 1; }
+  }
+  
